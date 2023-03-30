@@ -1,0 +1,23 @@
+<ivysettings>
+    <settings defaultResolver="my-chain"/>
+    <resolvers>
+        <chain name="my-chain">
+                <ibiblio name="central" m2compatible="true"/>
+                <ibiblio name="restlet" m2compatible="true" root="http://maven.restlet.com"/>
+        </chain>
+    </resolvers>
+    <modules>
+    <!-- Restlets are needed for solr dependency -->
+        <module organization="org.restlet.jee" resolver="restlet"/>
+        <module organization="restlet" resolver="restlet"/>
+        <module organization="org.restlet" resolver="restlet"/>
+    </modules>
+
+ <include url="${ivy.default.settings.dir}/ivysettings-public.xml"/>
+  <include url="${ivy.default.settings.dir}/ivysettings-shared.xml"/>
+  <include url="${ivy.default.settings.dir}/ivysettings-local.xml"/>
+  <include url="${ivy.default.settings.dir}/ivysettings-main-chain.xml"/>
+  <include url="${ivy.default.settings.dir}/ivysettings-default-chain.xml"/>
+
+</ivysettings>
+

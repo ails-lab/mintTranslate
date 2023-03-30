@@ -1,0 +1,16 @@
+/work
+/.classpath
+/.settings
+/.tomcatplugin
+/build.properties
+/bin
+classes/
+/lib/*
+.DS_Store
+.vscode
+.externalToolBuilders
+/.idea
+!/lib/.keep
+.ivy2
+
+

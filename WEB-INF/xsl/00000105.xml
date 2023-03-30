@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crm="http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.2_english_label.rdfs#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:xalan="http://xml.apache.org/xalan">
+   <edm:ProvidedCHO rdf:about="http://mint-projects.image.ntua.gr/europeana-fashion/00000105">
+      <dc:creator>Manifattura italiana, Parma</dc:creator>
+      <dc:creator>Gabinetto fotografico SBAS, Antonio Quattrone. (Photographer)</dc:creator>
+      <dc:date xml:lang="it">Inizio del XIX sec. </dc:date>
+      <dc:description xml:lang="it">Abito in tre pezzi (marsina, gilet, calzoni) in raso di seta liseré a fondo marrone con disegno a minuto motivo geometrico blu, ricamato a punto steso, punto passato e punto piatto in filo di seta avorio, argento filato e paillettes a palmette e fiordalisi. Marsina a redingote con falde sfuggenti accostate agli spacchi laterali e centrale posteriore in piegoni ribattuti, ornati da due bottoni al punto vita. collo alto, maniche aderenti con polsi guarniti da due bottoni, mostre stondate con sette bottoni e due asole, tasche a patta sagomata a tre bottoni. Gilet con collarino a fascetta, tasche a patta sagomata con falde trasversali e taglio in vita, chiuso da sette bottoni fasciati. Calzoni-culottes increspati in vita, chiusi al ginocchio da tre bottoni e cinturino, patta anteriore chiusa da quattro bottoni sulla baschina sottostante, provvista di taschini orizzontali e di quattro bottoni verticali. cinturino posteriore in vita da abbottonare.  </dc:description>
+      <dc:identifier>00000105</dc:identifier>
+      <dc:title xml:lang="it">Abito maschile da cerimonia in tre pezzi.</dc:title>
+      <dc:type rdf:resource="http://thesaurus.europeanafashion.eu/thesaurus/10435" />
+      <dc:type xml:lang="en">Object Type: men's costume</dc:type>
+      <dcterms:created>1840/1859</dcterms:created>
+      <dcterms:created>1800/1825</dcterms:created>
+      <dcterms:provenance xml:lang="it">Galleria del Costume di Palazzo Pitti</dcterms:provenance>
+      <edm:type>IMAGE</edm:type>
+   </edm:ProvidedCHO>
+   <edm:WebResource rdf:about="http://repos.europeanafashion.eu/gdcdpp/images/00000105N.jpg" />
+   <skos:Concept rdf:about="http://thesaurus.europeanafashion.eu/thesaurus/10435">
+      <skos:prefLabel xml:lang="it">indumento da uomo</skos:prefLabel>
+      <skos:prefLabel xml:lang="de">Herrenbekleidung</skos:prefLabel>
+      <skos:prefLabel xml:lang="he">בגדי גברים</skos:prefLabel>
+      <skos:prefLabel xml:lang="pt">traje masculino</skos:prefLabel>
+      <skos:prefLabel xml:lang="sr">muški kostim</skos:prefLabel>
+      <skos:prefLabel xml:lang="sv">herrkläder</skos:prefLabel>
+      <skos:prefLabel xml:lang="el">ανδρικό ένδυμα</skos:prefLabel>
+      <skos:prefLabel xml:lang="en">men's costume</skos:prefLabel>
+      <skos:prefLabel xml:lang="fr">costume masculin</skos:prefLabel>
+      <skos:prefLabel xml:lang="es">indumentaria masculina</skos:prefLabel>
+      <skos:prefLabel xml:lang="nl">herenkleding</skos:prefLabel>
+      <skos:altLabel xml:lang="fr">vêtement pour homme</skos:altLabel>
+      <skos:altLabel xml:lang="de">Herrenkostüm</skos:altLabel>
+      <skos:altLabel xml:lang="de">Herrenkleidung</skos:altLabel>
+      <skos:broader rdf:resource="http://thesaurus.europeanafashion.eu/thesaurus/10433" />
+   </skos:Concept>
+   <ore:Aggregation rdf:about="http://mint-projects.image.ntua.gr/europeana-fashion/Aggregation_00000105">
+      <edm:aggregatedCHO rdf:resource="http://mint-projects.image.ntua.gr/europeana-fashion/00000105" />
+      <edm:dataProvider>Galleria del Costume di Palazzo Pitti</edm:dataProvider>
+      <edm:isShownBy rdf:resource="http://repos.europeanafashion.eu/gdcdpp/images/00000105N.jpg" />
+      <edm:provider>Europeana Fashion</edm:provider>
+      <edm:rights rdf:resource="http://rightsstatements.org/vocab/InC/1.0/" />
+   </ore:Aggregation>
+</rdf:RDF>

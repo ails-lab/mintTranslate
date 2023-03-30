@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="gr.ntua.ivml.mint.persistent.Enrichment" table="enrichment">
+        <id name="dbID" column="enrichment_id">
+            <generator class="sequence">
+                <param name="sequence">seq_enrichment_id</param>
+            </generator>
+        </id>
+        <timestamp name="lastModified" column="last_modified" />
+        <property name="name" column="name" />
+        <property name="headers" column="headers" />
+        <many-to-one name="creator" column="creator_id" not-null="false"/>
+        <many-to-one name="organization" column="organization_id" not-null="false"/>
+        <property name="bytesize" column="byte_size"/>
+        <property name="lineCount" column="line_count"/>
+        <property name="projectIds" column="project_ids" type="gr.ntua.ivml.mint.persistent.ShortArrayType"/>
+        <property name="gzippedCsv" column="gzip_csv"/>
+        <property name="creationDate" column="creation_date" />
+
+    </class>
+</hibernate-mapping>

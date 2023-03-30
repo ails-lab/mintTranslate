@@ -1,0 +1,286 @@
+/**
+ * Buttons
+ */
+ 
+.mint2-action {
+	display: flex;
+	padding: 2px  0px 5px 5px;
+	background: #F2F2F2;
+	border-bottom: 1px solid #CCCCCC;
+	height: 26px;
+}
+
+.mint2-action .selector-text {
+	vertical-align: top;
+	margin-top: 8px;
+}
+
+.mint2-action .selector-text-hidden {
+	vertical-align: middle;
+	height: 21px;
+	margin-top: 8px;
+}
+
+.mint2-action .selector {
+	height: 24px;
+	vertical-align: middle;
+	margin-top: 2px;
+}
+
+.dsetimage{
+	position:absolute !important;max-width:30px !important;;max-height:30px !important;;top:-1px !important;
+}
+
+#searchsets{
+	background-color: rgba(37, 68, 185, 0.48) !important;
+	padding:10px !important;
+}
+
+.my-custom-indent {font-size: 14px;/*padding-top: 5px !important;*/}
+
+.plabels{
+    border-radius: 5px;
+    display: inline-block;
+    color:white;
+    text-transform: uppercase;
+    font-weight: normal;
+    font: 11px arial,sans-serif;
+    height: 2em;
+    margin: 2px;
+    outline: medium none;
+    padding: 3px 3px 0px 3px;
+    text-decoration: none;
+    text-shadow: none;
+    vertical-align: bottom;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+/* .roundedTwo {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  top: -0.5em;
+  display: inline-block;
+  margin: 0px 10px 0 30px;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+}
+.roundedTwo label {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.roundedTwo label:hover::after {
+  opacity: 0.3;
+}
+.roundedTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo input[type=checkbox]:checked + label:after {
+  opacity: 1;
+} */
+ 
+.mint2-documentation {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+ 
+.mint2-documentation {
+	background-image: url(../images/buttons/help.png) !important;
+}
+
+.mint2-documentation:hover {
+	background-image: url(../images/buttons/help_hover.png) !important;
+}
+
+.mint2-topright {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+/**
+ *	Messages
+ */
+
+.mint-message {
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.mint-message .ui-icon {
+	display: inline-block;
+}
+
+.mint-message-content {
+	display: inline-block;
+	margin-left: 8px;
+	width: 90%;
+	position: relative;
+	top: -4px;
+}
+
+.mint-loading {
+	
+}
+
+.mint-spinner {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-image: url(../images/buttons/loading.gif)  !important;
+}
+
+/**
+ *	Item Preview
+ */
+
+.mint2-preview {
+	position: relative;
+	height: 100%;
+}
+
+.mint2-preview-control {
+	display: inline-block;
+	width: 98%;
+	vertical-align: top;
+	overflow: auto;
+}
+
+.mint2-preview-views {
+	background-color: #E8EDF5;
+	display: inline-block;
+	width: 98%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.mint2-preview-options {
+	position: relative;
+	border: 1px solid #E0E0F0;
+	border-radius: 5px;
+	background: #E8EDF5;
+	margin-bottom: 10px;
+}
+
+.mint2-preview-option {
+	padding: 5px;
+}
+
+.mint2-preview-option div {
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+.mint2-preview-option select {
+	float: right;
+	border: 1px solid silver;
+	border-radius: 5px;
+}
+
+.mint2-preview-column {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: top;
+	overflow: auto;
+	width: 98%;
+}
+
+.mint2-box {
+	border: 1px solid #E0E0F0;
+	border-radius: 5px;
+	background: #E8EDF5;
+	margin-bottom: 5px;
+}
+
+.mint2-header {
+	font-weight: bold;
+	background: #D7E0EE;
+	padding: 5px;
+}
+
+.mint2-dataTable {
+	padding: 5px;
+}
+
+.mint2-dataTable-row {
+	padding: 5px;
+}
+
+
+.mint2-dataTable-row:hover {
+	background: #FAFBFD;
+}
+
+.mint2-label {
+	font-weight: bold;
+	margin-right: 10px;
+	display: inline-block;	
+}
+
+.mint2-value {
+}
+
+/* search box */
+.mint2-search-box {
+	border-radius: 20px;
+	background: white;
+	border: 1px solid #aaa;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mint2-search-box-select {
+	width:initial;
+	float:right;
+	position: relative;
+	top: -3px;	
+}
+
+.mint2-search-box input {
+	border: 0px solid transparent;
+	margin-left: 20px;
+	width: 85%;
+}
+
+/* language selection */
+.mint2-language-select {
+	width: 100px;
+}
+
+
+/* adjust zoom on mobile/tablets */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+ select:focus, textarea:focus, input:focus {
+ font-size: 16px;
+ background:#eee;
+  }
+ }

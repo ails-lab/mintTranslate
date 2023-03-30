@@ -1,0 +1,100 @@
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+    <info organisation="gr.ntua.ivml" module="mint25"/>
+   
+    <dependencies>
+    	<!-- We need an HttpClient -->
+    	<dependency org="org.apache.httpcomponents" name="httpasyncclient" rev="4.1"/>
+    	<dependency org="org.apache.httpcomponents" name="httpclient" rev="4.5.+" />
+    	<dependency org="org.apache.httpcomponents" name="fluent-hc" rev="4.5.+"/>
+    	
+    	<!-- Objects go to db via hibernate --> 
+    	<dependency org="org.hibernate" name="hibernate-core" rev="4.3.11.Final"/>
+    	<dependency org="org.hibernate" name="hibernate-c3p0" rev="4.3.11.Final"/>
+
+		<!-- There is direct dependency -->
+		<dependency org="xerces" name="xercesImpl" rev="2.12.2"/>
+
+    	<!-- XML processing power -->
+    	<dependency org="net.sf.saxon" name="Saxon-HE" rev="9.7.0-18">
+    		<exclude org="xom" />
+    	</dependency>
+	
+		<!-- postgres driver needs to be copied into tomcat lib dir -->
+		<!--  dependency org="org.postgresql" name="postgresql" rev="9.4.1208.jre7"/ -->
+        <dependency org="org.postgresql" name="postgresql" rev="42.2.19"/>
+            	
+    	<!-- All our full text index needs --> 
+		<dependency org="org.apache.solr" name="solr-solrj" rev="5.4.1"/>
+		<dependency org="org.apache.solr" name="solr-core" rev="5.4.1"/>
+		
+		<!-- faster json operations -->
+		<dependency org="net.minidev" name="json-smart" rev="2.2.1"/>
+		<dependency org="org.apache.struts" name="struts2-core"  rev="2.5.20">
+		    	<exclude org="asm" />
+		    	<exclude org="javassist" />
+		</dependency>
+		<dependency org="org.apache.struts" name="struts2-convention-plugin" rev="2.5.20">
+			<exclude org="asm" />
+		</dependency>
+		
+		<!--dependency org="org.eclipse.jetty.aggregate" name="jetty-all" rev="9.2.13.v20150730" /-->		
+		<!-- We use RabbitMQ with thrift messages for basic publication -->
+		<dependency org="org.apache.thrift" name="libthrift" rev="0.8.0" />
+		<dependency org="com.rabbitmq" name="amqp-client" rev="3.6.0"/>
+		
+		<!-- Using compress to create tar archives -->
+		<dependency org="org.apache.commons" name="commons-compress" rev="1.10"/>
+		
+		<!-- XOM library for updateable DOMs of XML (among other things) -->
+		<dependency org="xom" name="xom" rev="1.2.5"/>
+		
+		
+		<!-- XML schema parsing-->
+		<dependency org="com.sun.xsom" name="xsom" rev="20140925"/>
+		
+		<!-- 5 minutes ago, few moments ago, come from here -->
+		<dependency org="org.ocpsoft.prettytime" name="prettytime" rev="4.0.1.Final"/>
+		
+		<!-- Handling the ftp server  -->
+		<dependency org="commons-net" name="commons-net" rev="3.4"/>
+		
+		<!-- Groovy support -->
+		<dependency org="org.codehaus.groovy" name="groovy-all" rev="2.4.6"/>
+		
+		<!-- Testing Jackson as JSON library -->
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.8.8"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.8.8"/>
+		<dependency org="com.fasterxml.jackson.jr" name="jackson-jr-objects" rev="2.8.8"/>
+		
+		<!-- this needs to go one day soon -->
+		<dependency org="net.sf.json-lib" name="json-lib" rev="2.4"> 
+		  <artifact name="json-lib" e:classifier="jdk15" type="jar" ext="jar"/> 
+		 </dependency>
+		
+		
+		<!-- semantic stuff --> 
+		<dependency org="org.apache.jena" name="apache-jena-libs" rev="3.0.1">
+		    <artifact name="apache-jena-libs" type="compile" ext="pom"/>
+		</dependency>
+
+		<!-- Connect to fashion mysql database -->
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.42"/>
+		
+		 <dependency org="com.sun.mail" name="smtp" rev="1.6.2"/>
+		 
+		<dependency org="com.jayway.restassured" name="rest-assured" rev="2.3.2"/>
+		
+		<dependency org="net.sf.jasperreports" name="jasperreports" rev="6.2.0">
+			<exclude org="org.apache.xmlgraphics" />
+			<exclude org="com.lowagie" />
+			<exclude module="commons-javaflow"/>
+			<exclude module="mondrian"/>
+			<exclude org="org.olap4j" />
+		 </dependency>
+		 <exclude module="jsp-api" />
+		 <exclude org="javax.servlet" />
+		 <exclude artifact="javaee-api" />		 
+ 		 <exclude org="org.eclipse.jetty" />
+ 		 <exclude type="tests" />
+    </dependencies>
+</ivy-module>

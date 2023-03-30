@@ -1,0 +1,98 @@
+{
+	"@context": {},
+	"@graph": [
+		{
+			"id": "https://sage-ails.ails.ece.ntua.gr/resource/annotation/fe2b69e1-99c1-468f-b4f9-95cc51c3e6e3",
+			"type": "Annotation",
+			"created": "2022-06-29T14:08:13",
+			"creator": {
+				"id": "http://apps.islab.ntua.gr/inknowledge/",
+				"type": "Software"
+			},
+			"confidence": "0.96428571428571430157",
+			"review": {
+				"type": "Validation",
+				"recommendation": "accept"
+			},
+			"body": "http://www.wikidata.org/entity/Q59544",
+			"scope": "dc:description",
+			"target": {
+				"source": "urn://eriac/388"
+			}
+		},
+		{
+			"id": "https://sage-ails.ails.ece.ntua.gr/resource/annotation/fecff1fb-42c4-4863-9c47-0f5b2c92e766",
+			"type": "Annotation",
+			"created": "2022-06-29T14:08:12",
+			"creator": {
+				"id": "http://apps.islab.ntua.gr/inknowledge/",
+				"type": "Software",
+				"name": "Alex hacky stuff"
+			},
+			"confidence": "1.0",
+			"review": {
+				"type": "Validation",
+				"recommendation": "accept"
+			},
+			"body": {
+				"type": "TextualBody",
+				"value": "Wir können nur verstehen",
+				"language": "de"
+			},
+			"scope": "dc:description",
+			"target": {
+				"source": "urn://eriac/360",
+				"selector": {
+					"type": "RDFPropertySelector",
+					"property": "http://purl.org/dc/elements/1.1/description",
+					"destination": {
+						"type": "Literal",
+						"value": "French stuff here",
+						"language": "fr"
+					},
+					"refinedBy": {
+						"type": "TextPositionSelector",
+						"start": 6,
+						"end": 27
+					}
+				}
+			}
+		},
+		{
+			"id": "https://sage-ails.ails.ece.ntua.gr/resource/annotation/f8a203e3-5dbb-41fc-a817-fa5f9ffc3ae9",
+			"type": "Annotation",
+			"created": "2022-06-29T14:08:13",
+			"creator": {
+				"id": "http://apps.islab.ntua.gr/inknowledge/",
+				"type": "Software"
+			},
+			"confidence": "0.96428571428571430157",
+			"review": {
+				"type": "Validation",
+				"recommendation": "accept"
+			},
+			"body": [
+				"http://www.wikidata.org/entity/Q8434",
+				"http://www.wikidata.org/entity/Q84"
+			],
+			"scope": "dc:description",
+			"target": {
+				"source": "urn://eriac/338",
+				"selector": {
+					"type": "RDFPathSelector",
+					"rdfPath": "/<http://purl.org/dc/elements/1.1/description>/",
+					"destination": {
+						"type": "Literal",
+						"value": "We can only comprehend",
+						"language": "en"
+					},
+					"refinedBy": {
+						"type": "TextPositionSelector",
+						"start": 6,
+						"end": 27
+					}
+				}
+			}
+		}
+	]
+}

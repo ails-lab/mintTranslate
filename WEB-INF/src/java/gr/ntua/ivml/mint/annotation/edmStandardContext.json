@@ -1,0 +1,98 @@
+{
+	"as": "https://www.w3.org/ns/activitystreams#",
+	"dc": "http://purl.org/dc/terms/",
+	"dce": "http://purl.org/dc/elements/1.1/",
+	"foaf": "http://xmlns.com/foaf/0.1/",
+	"oa": "http://www.w3.org/ns/oa#",
+	"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+	"xsd": "http://www.w3.org/2001/XMLSchema#",
+	"soa": "http://sw.islab.ntua.gr/annotation/",
+	"id": {
+		"@id": "@id",
+		"@type": "@id"
+	},
+	"type": {
+		"@id": "@type",
+		"@type": "@id"
+	},
+	"value": "rdf:value",
+	"created": {
+		"@id": "dc:created",
+		"@type": "xsd:dateTime"
+	},
+	"creator": {
+		"@id": "dc:creator",
+		"@type": "@id"
+	},
+	"language": "dc:language",
+	"Software": "as:Application",
+	"Person": "foaf:Person",
+	"name": "foaf:name",
+	"Annotation": "oa:Annotation",
+	"TextPositionSelector": "oa:TextPositionSelector",
+	"TextualBody": "oa:TextualBody",
+	"body": {
+		"@id": "oa:hasBody",
+		"@type": "@id"
+	},
+	"end": {
+		"@id": "oa:end",
+		"@type": "xsd:nonNegativeInteger"
+	},
+	"refinedBy": {
+		"@id": "oa:refinedBy",
+		"@type": "@id"
+	},
+	"scope": {
+		"@id": "oa:hasScope",
+		"@type": "@id"
+	},
+	"selector": {
+		"@id": "oa:hasSelector",
+		"@type": "@id"
+	},
+	"start": {
+		"@id": "oa:start",
+		"@type": "xsd:nonNegativeInteger"
+	},
+	"source": {
+		"@id": "oa:hasSource",
+		"@type": "@id"
+	},
+	"target": {
+		"@id": "oa:hasTarget",
+		"@type": "@id"
+	},
+	"Literal": "soa:Literal",
+	"Rating": "soa:Rating",
+	"RDFPathSelector": "soa:RDFPathSelector",
+	"RDFPropertySelector": "soa:RDFPropertySelector",
+	"Validation": "soa:Validation",
+	"confidence": {
+		"@id": "soa:confidence",
+		"@type": "xsd:decimal"
+	},
+	"destination": {
+		"@id": "soa:destination",
+		"@type": "@id"
+	},
+	"property": {
+		"@id": "soa:property",
+		"@type": "@id"
+	},
+	"rdfPath": "soa:rdfPath",
+	"recommendation": {
+		"@id": "soa:recommendation",
+		"@type": "@vocab"
+	},
+	"score": {
+		"@id": "soa:score",
+		"@type": "xsd:decimal"
+	},
+	"review": {
+		"@id": "soa:hasReview",
+		"@type": "@id"
+	},
+	"accept": "soa:Accept",
+	"reject": "soa:Reject"
+}
