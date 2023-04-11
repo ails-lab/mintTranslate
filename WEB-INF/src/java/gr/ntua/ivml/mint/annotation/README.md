@@ -25,8 +25,52 @@ jq -r <annotation.json '["scope", "id", "confidence", "english" ] ,
 * To modify the process, change field names in tgzToAnnotationSet.groovy script, or add filters to jq for confidence, scope or whatever other condition seems appropriate for your dataset.
 * upload the csv file to the correct organization into mint via the upload script:
 
-`groovy uploadCsv.groovy dataset_1234_translations.csv 1022`
+`groovy MintUploadEnrichment.groovy -m http://mint.server.url/mint/instance -u user:password -o 1022 dataset_1234_translations.csv`
 
 * Invoke the script for Enrichment from the MINT script console. This needs to be parameterized with the correct dataset ID, the enrichment ID of the uploaded CSV file, and which column in it contains which values. If there are record or value based filterings to apply, this script is a good place.
 
+```
+import gr.ntua.ivml.mint.util.SetCounter;
+import gr.ntua.ivml.mint.util.StringUtils;
+import org.apache.log4j.Logger;
+import java.io.*
 
+@CompileStatic
+def makeModifier() {
+   // enter the id of the uploaded enrichment
+   Enrichment.EnrichBuilder translateEnrich = DB.enrichmentDAO.getById( 9999l, false ).getEnrichBuilder( 1 ) 
+  
+   def mod = { Document doc -> 
+
+        Nodes nodes = doc.query( "//*[local-name()='ProvidedCHO']/@*[local-name()='about']");
+        if( nodes.size() != 1 ) return;
+
+        // make sure there were no duplicates before
+        String key = nodes.get(0).getValue();
+
+        for( String[] row: translateEnrich.getWithKey( key )) {
+            String english = row[3]
+            Optional<String> confidence = Optional.ofNullable( row[2] ).filter( { String s ->  !StringUtils.empty( s )} as java.util.function.Predicate<String> )
+            EdmEnrichBuilder.enrichLiteral( doc, row[0], "en", english, "SoftwareAgent",  confidence  ) 
+        }
+
+
+   } as ThrowingConsumer<Document>
+   return mod
+} 
+
+
+def interceptor = Interceptor.modifyInterceptor( makeModifier() )
+
+// works with EDM schemas that support wasGeneratedBy and confidence attributes
+def schema = DB.xmlSchemaDAO.simpleGet( "name = 'EDM annotated'")
+
+// Name this better if you have changed the scripts
+new EdmEnrichBuilder()
+  .setName( "Standard EDM translations to English" )
+  .setTargetSchema( schema  )
+  .setDocumentInterceptor( interceptor )
+  // put the correct dataset id here ... the one you downloaded as tgz
+  .submit( 1234l )
+
+```
